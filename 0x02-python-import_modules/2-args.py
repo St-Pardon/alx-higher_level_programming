@@ -5,4 +5,4 @@ if __name__ == "__main__":
     print("{} arguments:".format(len(sys.argv) - 1))
     for arg in range(len(sys.argv) - 1):
         print("{}: {}".format(line, sys.argv[line]))
-        lne += 1
+        line += 1
