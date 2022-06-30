@@ -4,5 +4,5 @@ if __name__ == "__main__":
     line = 1
     print("{} arguments:".format(len(sys.argv) - 1))
     for arg in range(len(sys.argv) - 1):
-        print(f"{}: {}".format(line, sys.argv[line]))
+        print("{}: {}".format(line, sys.argv[line]))
         lne += 1
