@@ -1,16 +1,21 @@
-# 0x02. Python - import & modules Python
+# 0x03. Python - Data Structures: Lists, Tuples
 
 ## Learning Objectives
 *At the end of this project, you are expected to be able to explain to anyone, without the help of Google:*
 
 ### General
 - Why Python programming is awesome
-- How to import functions from another file
-- How to use imported functions
-- How to create a module
-- How to use the built-in function dir()
-- How to prevent code in your script from being executed when imported
-- How to use command line arguments with your Python programs
+- What are lists and how to use them
+- What are the differences and similarities between strings and lists
+- What are the most common methods of lists and how to use them
+- How to use lists as stacks and queues
+- What are list comprehensions and how to use them
+- What are tuples and how to use them
+- When to use tuples versus lists
+- What is a sequence
+- What is tuple packing
+- What is sequence unpacking
+- What is the del statement and how to use it
 
 ## Requirements
 ### Python Scripts
@@ -35,4 +40,3 @@
 - The prototypes of all your functions should be included in your header file called lists.h
 - Don’t forget to push your header file
 - All your header files should be include guarded
-
