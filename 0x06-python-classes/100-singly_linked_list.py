@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+'''
+A module for working with singly linked lists.
+'''
+
+
 class Node:
+    '''
+    Represents a node in a singly linked list.
+    '''
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = next_node
@@ -28,6 +36,9 @@ class Node:
 
 
 class SinglyLinkedList:
+    '''
+    Represents a singly linked list.
+    '''
     def __init__(self):
         self.__head = None
 
