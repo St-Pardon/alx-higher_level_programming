@@ -2,6 +2,8 @@
 """
 A module for working with squares.
 """
+
+
 class Square:
     """
     This represents a 2D Polygon
