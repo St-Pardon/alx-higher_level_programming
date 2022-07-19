@@ -1,5 +1,14 @@
 #!/usr/bin/python3
+'''
+A module for working with squares.
+'''
+
+
 class Square:
+    '''
+    This represents a 2D Polygon
+    with 4 equal and perpendicular sides.
+    '''
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position

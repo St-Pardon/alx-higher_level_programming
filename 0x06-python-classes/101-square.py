@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+'''
+A module for working with singly linked lists.
+'''
+
+
 class Square:
+    '''
+    this represents a node in a singly linked list.
+    '''
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
