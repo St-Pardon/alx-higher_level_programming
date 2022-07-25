@@ -1,9 +1,9 @@
 '''
-# Import the required function
+# Importing the required function
 >>> from importlib import import_module
 >>> add_integer = import_module('0-add_integer').add_integer
 
-# Valid arguments
+# Valid test arguments
 >>> add_integer(3, 4)
 7
 >>> add_integer(2)
@@ -11,7 +11,7 @@
 >>> add_integer(1.2, 5.8)
 6
 
-# Invalid arguments
+# Test for invalid arguments
 >>> try:
 ...     add_integer('3', 3)
 ... except TypeError as ex:
