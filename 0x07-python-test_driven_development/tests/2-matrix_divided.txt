@@ -1,0 +1,83 @@
+'''
+# Importing the required function
+>>> from importlib import import_module
+>>> matrix_divided = import_module('2-matrix_divided').matrix_divided
+
+# Test with valid arguments
+>>> matrix_divided([[4, 7]], 2)
+[[2.0, 3.5]]
+>>> matrix_divided([[4, 7]], 0.25)
+[[16.0, 28.0]]
+>>> matrix_divided([[12, 7], [21, 23]], 13)
+[[0.92, 0.54], [1.62, 1.77]]
+>>> matrix_divided([[4, 5], [6, 8]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+# Test with invalid arguments
+>>> try:
+...     matrix_divided([7], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     matrix_divided([['7', '9']], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     matrix_divided([[1, 4], [18, 9], 3], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     matrix_divided([[7, 9, 12], [5], [1, 2, 3]], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+Each row of the matrix must have the same size
+>>> try:
+...     matrix_divided([[7, 9, 12], [1, 2, 3], [7, 13, 15, 18]], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+Each row of the matrix must have the same size
+>>> try:
+...     matrix_divided([[4]], '2')
+... except TypeError as ex:
+...     print(ex.args[0])
+div must be a number
+>>> try:
+...     matrix_divided([[4]], b'2')
+... except TypeError as ex:
+...     print(ex.args[0])
+div must be a number
+>>> try:
+...     matrix_divided([[4, 7]], 0)
+... except ZeroDivisionError as ex:
+...     print(ex.args[0])
+division by zero
+>>> try:
+...     matrix_divided([[4, 7]])
+... except Exception as ex:
+...     print(ex.args[0])
+matrix_divided() missing 1 required positional argument: 'div'
+>>> try:
+...     matrix_divided()
+... except Exception as ex:
+...     print(ex.args[0])
+matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> try:
+...     matrix_divided([[]], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     matrix_divided([], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     matrix_divided([(1, 2)], 3)
+... except TypeError as ex:
+...     print(ex.args[0])
+matrix must be a matrix (list of lists) of integers/floats
+
+'''
