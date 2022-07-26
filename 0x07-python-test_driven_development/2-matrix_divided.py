@@ -3,21 +3,20 @@ def matrix_divided(matrix, div):
     """function divides the provided matrix with the div param"""
 
     result = []
-    if not div or (type(div) != int and type(div) != float):
-        raise TypeError("div must be a number")
-
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    if len(matrix) == 0:
+    elif not div or (type(div) != int and type(div) != float):
+        raise TypeError("div must be a number")
+    elif len(matrix) == 0:
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
     for i in range(len(matrix)):
-        if type(matrix[i]) != list:
+        if type(matrix[i]) != list or type(matrix[-1]) != list:
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-
-        if len(matrix[i]) != len(matrix[i - 1]):
+        elif len(matrix[i]) != len(matrix[i - 1]):
             raise TypeError("Each row of the matrix must have the same size")
+        elif not matrix[i]:
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
         result.append([])
 
