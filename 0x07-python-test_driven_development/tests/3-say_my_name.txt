@@ -1,0 +1,27 @@
+'''
+# Importing the required function
+>>> from importlib import import_module
+>>> say_my_name = import_module('3-say_my_name').say_my_name
+
+# Testing valid arguments
+>>> say_my_name("Naruto", "Uzumaki")
+My name is Naruto Uzumaki
+
+# Testing invalid arguments
+>>> try:
+...     say_my_name("Naruto", 87)
+... except TypeError as ex:
+...     print(ex.args[0])
+last_name must be a string
+>>> try:
+...     say_my_name(3.14, "Uzumaki")
+... except TypeError as ex:
+...     print(ex.args[0])
+first_name must be a string
+>>> try:
+...     say_my_name()
+... except Exception as ex:
+...     print(ex.args[0])
+say_my_name() missing 1 required positional argument: 'first_name'
+
+'''
