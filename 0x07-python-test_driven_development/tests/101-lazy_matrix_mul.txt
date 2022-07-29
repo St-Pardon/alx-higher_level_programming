@@ -1,0 +1,113 @@
+'''
+# Import the required function
+>>> from importlib import import_module
+>>> lazy_matrix_mul = import_module('101-lazy_matrix_mul').lazy_matrix_mul
+
+# Testing Valid arguments
+>>> print(lazy_matrix_mul([[13, 12]], [[31], [21]]))
+[[655]]
+>>> print(lazy_matrix_mul([[6, 8], [3, 7]], [[12, 3], [3, 4]]))
+[[96 50]
+ [57 37]]
+>>> print(lazy_matrix_mul([[3, 19, 7], [11, 12, 5], [2, 4, 8]], [[12, 3], [9, 4], [15, 2]]))
+[[312  99]
+ [315  91]
+ [180  38]]
+
+# Testing innvalid arguments
+>>> try:
+...     print(lazy_matrix_mul(12, [[4, 6]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 0 does not have enough dimensions (has 0, gufunc core with signature (n?,k),(k,m?)->(n?,m?) requires 1)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6]], 12))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 does not have enough dimensions (has 0, gufunc core with signature (n?,k),(k,m?)->(n?,m?) requires 1)
+>>> try:
+...     print(lazy_matrix_mul(['[4, 6]'], 12))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 does not have enough dimensions (has 0, gufunc core with signature (n?,k),(k,m?)->(n?,m?) requires 1)
+>>> try:
+...     print(lazy_matrix_mul([(4, 6)], [12]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6]], [(12, )]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([[1, 6], [3, 3]], [[]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([[4, '6', 8]], [[12]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 3)
+>>> try:
+...     print(lazy_matrix_mul([[4, '6', 8]], [['12']]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 3)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6, 8], []], [[(12, )]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6, 8], []], [[12, 3]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6, 8], [1, 2, 3]], [[12, 3], []]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2 is different from 3)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6, 8], [1]], [[12, 3]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6, 8], [4, 4, 4]], [[12, 3], [7]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 2 is different from 3)
+>>> try:
+...     print(lazy_matrix_mul([[4, 6, 8], [1, 3, 7]], [[12, 3]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 3)
+>>> try:
+...     print(lazy_matrix_mul([[6, 8], [3, 7]], [[12, 3], [3.5, 4], [15, 5]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 3 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([], [[12]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 0)
+>>> try:
+...     print(lazy_matrix_mul([['2', '3']], [[]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 2)
+>>> try:
+...     print(lazy_matrix_mul([[]], [[12]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 0)
+>>> try:
+...     print(lazy_matrix_mul([[], []], [[12]]))
+... except ValueError as ex:
+...     print(ex.args[0])
+matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 1 is different from 0)
+'''
