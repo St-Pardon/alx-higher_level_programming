@@ -1,0 +1,76 @@
+'''
+# Import the required class
+>>> from importlib import import_module
+>>> MyList = import_module('1-my_list').MyList
+
+# Testing valid arguments
+>>> l = MyList()
+>>> type(l)
+<class '1-my_list.MyList'>
+>>> isinstance(MyList, list)
+False
+>>> issubclass(MyList, list)
+True
+>>> l = MyList()
+>>> l.print_sorted()
+[]
+>>> l = MyList([7])
+>>> l.print_sorted()
+[7]
+>>> l = MyList((2, 3))
+>>> l.print_sorted()
+[2, 3]
+>>> l = MyList(b'78531')
+>>> l.print_sorted()
+[49, 51, 53, 55, 56]
+>>> l = MyList([2, 3, 5])
+>>> l.print_sorted()
+[2, 3, 5]
+>>> l = MyList([17, 13, 9, 5, 1])
+>>> l.print_sorted()
+[1, 5, 9, 13, 17]
+>>> l = MyList([7, 12, 5, 2, 9, 129, 50, 35])
+>>> l.print_sorted()
+[2, 5, 7, 9, 12, 35, 50, 129]
+>>> l
+[7, 12, 5, 2, 9, 129, 50, 35]
+>>> l = MyList([-7, -8, -2, -19])
+>>> l.print_sorted()
+[-19, -8, -7, -2]
+>>> l = MyList([-7, -8, -2, 6])
+>>> l.print_sorted()
+[-8, -7, -2, 6]
+>>> l = MyList([-7, 8, 2, 6])
+>>> l.print_sorted()
+[-7, 2, 6, 8]
+>>> l = MyList([7, 7, 7])
+>>> l.print_sorted()
+[7, 7, 7]
+>>> try:
+...     l = MyList(4, 7)
+... except Exception as ex:
+...     print('[{}] {}'.format(ex.__class__.__name__, ex.args[0]))
+[TypeError] list expected at most 1 argument, got 2
+>>> try:
+...     l = MyList()
+...     l.append(78)
+...     l.append(None)
+...     l.print_sorted()
+... except Exception as ex:
+...     print('[{}] {}'.format(ex.__class__.__name__, ex.args[0]))
+[TypeError] '<' not supported between instances of 'NoneType' and 'int'
+>>> try:
+...     l = MyList()
+...     l.append(78)
+...     l.append([12])
+...     l.print_sorted()
+... except Exception as ex:
+...     print('[{}] {}'.format(ex.__class__.__name__, ex.args[0]))
+[TypeError] '<' not supported between instances of 'list' and 'int'
+>>> try:
+...     l.print_sorted([5, 2])
+... except Exception as ex:
+...     print('[{}] {}'.format(ex.__class__.__name__, ex.args[0]))
+[TypeError] print_sorted() takes 1 positional argument but 2 were given
+
+'''
