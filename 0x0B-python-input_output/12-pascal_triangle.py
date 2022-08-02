@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""function"""
+
+
 def pascal_triangle(n):
     """
     Generates a list of lists of integers representing the
