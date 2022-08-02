@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-from json import JSONEncoder
+from json import JSONDecoder
 
 
 def from_json_string(my_obj):
     """function that returns the JSON representation of an object (string)"""
-    return JSONEncoder().decode(my_obj)
+    return JSONDecoder().decode(my_obj)
