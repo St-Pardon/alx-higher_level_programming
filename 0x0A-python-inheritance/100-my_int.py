@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""class model"""
+
+
 class MyInt(int):
     '''Represents a rebellious integer object.
     '''

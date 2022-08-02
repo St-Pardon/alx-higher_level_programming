@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''A module for manipulating objects.'''
+"""A module for manipulating objects."""
 
 
 def add_attribute(obj, name, value):
