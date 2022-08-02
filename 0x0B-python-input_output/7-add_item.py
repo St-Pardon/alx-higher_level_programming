@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """A script that stores arguments to a JSON file."""
-
 import sys
 import os
 from importlib import import_module as using

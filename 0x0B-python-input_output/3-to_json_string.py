@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""functions"""
 from json import JSONEncoder
 
 
