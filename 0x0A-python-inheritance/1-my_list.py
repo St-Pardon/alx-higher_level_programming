@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""class mode"""
+
+
 class MyList(list):
     """Mylist class that inherites from list"""
     def print_sorted(self):

@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""a function"""
+
+
 def inherits_from(obj, a_class):
     """
     object is an instance of a class that inherited (directly or indirectly) /
