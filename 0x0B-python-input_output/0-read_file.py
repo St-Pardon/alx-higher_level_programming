@@ -3,6 +3,7 @@
 
 
 def read_file(filename=""):
+    """functions"""
     with open(filename, encoding='utf-8') as file:
         for line in file.readlines():
             print(line, end='')
