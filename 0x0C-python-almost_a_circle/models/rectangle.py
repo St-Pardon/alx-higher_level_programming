@@ -71,6 +71,20 @@ class Rectangle(Base):
     def display(self):
         """reperesentation of text"""
         print('\n' * self.y, end='')
-        print('{:s}{:s}\n'.format(' ' * self.x, '#' * self.width) * self.height, end='')
+        print('{:s}{:s}\n\
+'.format(' ' * self.x, '#' * self.width) * self.height, end='')
 
-        
+    def __str__(self):
+        """string representation"""
+        return "[Rectangle] ({}) {:d}/{:d} - \
+{:d}/{:d}".format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kargs):
+        """update attributes"""
+        keys = ('id', 'width', 'height', 'x', 'y')
+        for key, val in zip(keys, args):
+            setattr(self, key, val)
+        if (type(args) is None or len(args) == 0) and (type(kargs) is dict):
+            for key, val in kargs.items():
+                if key in keys:
+                    setattr(self, key, val)
