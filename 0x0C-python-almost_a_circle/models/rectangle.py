@@ -69,7 +69,8 @@ class Rectangle(Base):
         return self.height * self.width
 
     def display(self):
-        for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print()
+        """reperesentation of text"""
+        print('\n' * self.y, end='')
+        print('{:s}{:s}\n'.format(' ' * self.x, '#' * self.width) * self.height, end='')
+
+        
