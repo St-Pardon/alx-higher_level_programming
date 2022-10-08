@@ -18,4 +18,6 @@ if __name__ == "__main__":
     data = session.query(State).first()
     if data is not None:
         print("{}: {}".format(data.id, data.name))
+    else:
+        print('Nothing')
     session.close()
