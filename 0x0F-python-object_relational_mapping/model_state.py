@@ -8,6 +8,8 @@ from sqlalchemy import Column, Integer, String
 Base = declarative_base()
 '''Represents the base class for all tables.
 '''
+
+
 class State(Base):
     '''Represents a row in a states table.
     '''
