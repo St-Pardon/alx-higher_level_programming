@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Database connection"""
 from sys import argv
 import MySQLdb
 
+"""Connection set up"""
 connection = MySQLdb.connect(
     host="localhost",
     port=3306, user=argv[1],
