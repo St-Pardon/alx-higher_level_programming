@@ -13,7 +13,8 @@ if __name__ == '__main__':
         charset="utf8"
     )
     db = connection.cursor()
-    db.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    db.execute("SELECT * FROM states WHERE name IS NOT " +
+               "NULL AND LEFT(CAST(name AS BINARY), 1) = 'N' ORDER BY id ASC;")
     query_rows = db.fetchall()
 
     for row in query_rows:
