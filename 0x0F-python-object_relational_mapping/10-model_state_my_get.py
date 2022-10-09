@@ -17,7 +17,7 @@ if __name__ == "__main__":
     session = Session(engine)
     res = session.query(State).filter(State.name.like(argv[4])).first()
 
-    if res is NOT None:
+    if res is not None:
         print("{}".format(res.id))
     else:
         print('Not Found')
