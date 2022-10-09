@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    res = session.query(State).filter(State.name.like(argv[4])).first()
+    res = session.query(State).filter(State.name == argv[4]).first()
 
     if res is not None:
         print("{}".format(res.id))
