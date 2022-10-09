@@ -20,5 +20,5 @@ if __name__ == "__main__":
     if res is not None:
         print("{}".format(res.id))
     else:
-        print('Not Found')
+        print('Not found')
     session.close()
