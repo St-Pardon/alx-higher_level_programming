@@ -10,7 +10,7 @@ import requests as req
 if __name__ == '__main__':
     if len(argv) > 1:
         res = req.get(argv[1])
-        if res.status.code >= 400:
-            print('Error code: {}'.format(res.status.code))
+        if res.status_code >= 400:
+            print('Error code: {}'.format(res.status_code))
         else:
             print(res.text)

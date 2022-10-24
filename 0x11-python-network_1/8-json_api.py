@@ -8,7 +8,7 @@ import requests as req
 
 
 if __name__ == '__main__':
-    query = argv[1] if len(argv) > 1 and type(argv[1]) == str else ""
+    query = argv[1] if len(argv) > 1 else ""
     res = req.post('http://0.0.0.0:5000/search_user', data={'q', query})
     try:
         json_data = res.json()
