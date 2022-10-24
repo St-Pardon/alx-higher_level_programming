@@ -77,3 +77,33 @@ Write a Python script that takes in a URL and an email address, sends a `POST` r
 - [x] You must use the packages `requests` and `sys`
 - [x] You are not allowed to import packages other than `requests` and `sys`
 - [x] You don’t need to error check arguments passed to the script (number or type)
+
+### [7. Error code #1](./7-error_code.py)
+Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response.
+
+If the HTTP status code is greater than or equal to 400, print: `Error code:` followed by the value of the HTTP status code
+- [x] You must use the packages `requests` and `sys`
+- [x] You are not allowed to import packages other than `requests` and `sys`
+- [x] You don’t need to check arguments passed to the script (number or type)
+
+### [8. Search API](./8-json_api.py)
+Write a Python script that takes in a letter and sends a `POST` request to `http://0.0.0.0:5000/search_user` with the letter as a parameter.
+
+The letter must be sent in the variable `q`
+- [x] If no argument is given, set `q=""`
+- [x] If the response body is properly JSON formatted and not empty, display the `id` and `name` like this: `[<id>] <name>`
+- Otherwise:
+ - [x] Display `Not a valid JSON` if the JSON is invalid
+ - [x] Display `No result` if the JSON is empty
+- [x] You must use the package `requests` and `sys`
+- [x] You are not allowed to import packages other than `requests` and `sys`
+
+### [9. My GitHub!](./10-my_github.py)
+Write a Python script that takes your GitHub credentials (username and password) and uses the [GitHub API](https://docs.github.com/en/rest/users) to display your `id`
+
+- [x] You must use [Basic Authentication](https://alx-intranet.hbtn.io/rltoken/VsPQfbYBgBA0PPdpdJNPIQ) with a [personal access token as password](https://alx-intranet.hbtn.io/rltoken/cQ7P5gl79x0I_3Pl3hG2hw) to access to your information (only `read:user` permission is needed)
+- [x] The first argument will be your `username`
+- [x] The second argument will be your `password` (in your case, a personal access token as password)
+- [x] You must use the package `requests` and `sys`
+- [x] You are not allowed to import packages other than `requests` and `sys`
+- [x] You don’t need to check arguments passed to the script (number or type)
