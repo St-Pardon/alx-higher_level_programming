@@ -45,3 +45,19 @@ Write a Python script that takes in a URL, sends a request to the URL and displa
 - [x] The value of this variable is different for each request
 - [x] You don’t need to check arguments passed to the script (number or type)
 - [x] You must use a `with` statement
+
+### [3. Error code #0](./3-error_code.py)
+Write a Python script that takes in a URL, sends a request to the URL and displays the body of the response (decoded in `utf-8`).
+
+- [x] You have to manage `urllib.error.HTTPError` exceptions and print: `Error code:` followed by the HTTP status code
+- [x] You must use the packages `urllib` and `sys`
+- [x] You are not allowed to import other packages than `urllib` and `sys`
+- [x] You don’t need to check arguments passed to the script (number or type)
+- [x] You must use the `with` statement
+
+### [4. What's my status? #1](./4-hbtn_status.py)
+Write a Python script that fetches `https://alx-intranet.hbtn.io/status`
+
+- [ ] You must use the package `requests`
+- [ ] You are not allow to import packages other than `requests`
+- [ ] The body of the response must be display like the following example (tabulation before `-`)
