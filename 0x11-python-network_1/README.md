@@ -61,3 +61,19 @@ Write a Python script that fetches `https://alx-intranet.hbtn.io/status`
 - [x] You must use the package `requests`
 - [x] You are not allow to import packages other than `requests`
 - [x] The body of the response must be display like the following example (tabulation before `-`)
+
+### [5. Response header value #1](./5-hbtn_header.py)
+Write a Python script that takes in a URL, sends a request to the URL and displays the value of the variable `X-Request-Id` in the response header
+
+- [x] You must use the packages `requests` and `sys`
+- [x] You are not allow to import other packages than `requests` and `sys`
+- [x] The value of this variable is different for each request
+- [x] You don’t need to check script arguments (number and type)
+
+### [6. POST an email #1](./6-post_email.py)
+Write a Python script that takes in a URL and an email address, sends a `POST` request to the passed URL with the email as a parameter, and finally displays the body of the response.
+
+- [x] The email must be sent in the variable `email`
+- [x] You must use the packages `requests` and `sys`
+- [x] You are not allowed to import packages other than `requests` and `sys`
+- [x] You don’t need to error check arguments passed to the script (number or type)
