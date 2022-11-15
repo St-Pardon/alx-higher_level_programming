@@ -48,6 +48,6 @@ Write a script that gets the contents of a webpage and stores it in a file.
 ### 6. [How many completed?](./6-completed_tasks.js)
 Write a script that computes the number of tasks completed by user id.
 
-- [ ] The first argument is the API URL: `https://jsonplaceholder.typicode.com/todos`
-- [ ] Only print users with completed task
-- [ ] You must use the module `request`
+- [x] The first argument is the API URL: `https://jsonplaceholder.typicode.com/todos`
+- [x] Only print users with completed task
+- [x] You must use the module `request`
