@@ -51,3 +51,19 @@ Write a script that computes the number of tasks completed by user id.
 - [x] The first argument is the API URL: `https://jsonplaceholder.typicode.com/todos`
 - [x] Only print users with completed task
 - [x] You must use the module `request`
+
+### [7. Who was playing in this movie?](./100-starwars_characters.js)
+Write a script that prints all characters of a Star Wars movie:
+
+- [x] The first argument is the Movie ID - example: `3` = “Return of the Jedi”
+- [x] Display one character name by line
+- [x] You must use the Star wars API
+- [x] You must use the module `request`
+
+### [8. Right order](./)
+Write a script that prints all characters of a Star Wars movie:
+
+- [ ] The first argument is the Movie ID - example: `3` = “Return of the Jedi”
+- [ ] Display one character name by line **in the same order of the list “characters” in the `/films/` response**
+- [ ] You must use the Star wars API
+- [ ] You must use the module `request`
